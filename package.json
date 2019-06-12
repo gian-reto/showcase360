@@ -1,0 +1,38 @@
+{
+  "name": "showcase360",
+  "version": "0.0.1",
+  "description": "A lightweight plugin to showcase an object from every angle using multiple images.",
+  "main": "dist/showcase360.js",
+  "keywords": [
+    "showcase",
+    "360",
+    "slider",
+    "carousel"
+  ],
+  "bugs": {
+    "url": "https://github.com/gian-reto/showcase360/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gian-reto/showcase360.git"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 3 versions",
+    "ie >= 11"
+  ],
+  "homepage": "https://github.com/gian-reto/showcase360",
+  "author": "Gian-Reto Tarnutzer",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7.4.5",
+    "@babel/preset-env": "7.4.5",
+    "babel-loader": "8.0.6",
+    "rimraf": "2.6.3",
+    "webpack": "4.33.0",
+    "webpack-cli": "3.3.4"
+  },
+  "scripts": {
+    "build": "rimraf dist && webpack"
+  }
+}
