@@ -1,7 +1,7 @@
 {
   "name": "showcase360",
   "version": "0.0.1",
-  "description": "A lightweight plugin to showcase an object from every angle using multiple images.",
+  "description": "A lightweight plugin to create a pseudo-360 view of an object using multiple images.",
   "main": "dist/showcase360.js",
   "keywords": [
     "showcase",
