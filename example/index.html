@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>showcase360 demo</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>showcase360 demo</title>
 
-  <script src="../dist/showcase360.js"></script>
+    <script src="../dist/showcase360.js"></script>
 
-  <style>
-    .showcase {
-      width: 300px;
-      border: 1px solid black;
-      margin: 0 0 1rem 0;
-    }
-
-    .showcase img {
-      width: 100%;
-    }
-  </style>
-</head>
-<body>
-  <div class="showcase">
-    <img src="./shoe/1.jpg" alt="Shoe">
-  </div>
-
-  <div class="showcase">
-    <img src="./shoe/1.jpg" alt="Shoe">
-  </div>
-
-  <script>
-    onReady = function() {
-      var showcases = document.querySelectorAll('.showcase');
-      var images = [];
-
-      for (var i = 1; i <= 8; i++) {
-        images.push('./shoe/' + i + '.jpg');
+    <style>
+      .showcase {
+        width: 300px;
+        border: 1px solid black;
+        margin: 0 0 1rem 0;
       }
 
-      for (var i = 0; i < showcases.length; i++) {
-        showcase = showcase360(showcases[i], {
-          images: images,
-          auto: true,
-          speed: 100
-        });
-
-        showcase.init();
+      .showcase img {
+        width: 100%;
       }
-    };
+    </style>
+  </head>
+  <body>
+    <div class="showcase"></div>
+    <div class="showcase"></div>
 
-    target = window;
-    eventName = 'load';
-    handler = onReady;
+    <script>
+      onReady = function() {
+        var showcases = document.querySelectorAll(".showcase");
+        var images = [];
 
-    if (target.addEventListener) {
-      target.addEventListener(eventName, handler, false);
-    } else if (target.attachEvent) {
-      target.attachEvent('on' + eventName, handler);
-    } else {
-      target['on' + eventName] = handler;
-    }
-  </script>
-</body>
+        for (var i = 1; i <= 8; i++) {
+          images.push("./shoe/" + i + ".jpg");
+        }
+
+        for (var i = 0; i < showcases.length; i++) {
+          showcase = showcase360(showcases[i], {
+            images: images,
+            mode: "interactive",
+            speed: 100,
+          });
+
+          showcase.init();
+        }
+      };
+
+      target = window;
+      eventName = "load";
+      handler = onReady;
+
+      if (target.addEventListener) {
+        target.addEventListener(eventName, handler, false);
+      } else if (target.attachEvent) {
+        target.attachEvent("on" + eventName, handler);
+      } else {
+        target["on" + eventName] = handler;
+      }
+    </script>
+  </body>
 </html>
