@@ -137,9 +137,8 @@ const showcase360 = (el, options) => {
       }
 
       container.appendChild(image);
+      images.push(image);
     });
-
-    images = container.querySelectorAll("img");
   };
 
   const init = () => {
